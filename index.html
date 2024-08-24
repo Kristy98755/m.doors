@@ -10,14 +10,23 @@
 	<div class="toolbar" align="center">
 	<button class="burger"></button>
 <script>
-	const burger = document.querySelector('.burger');
-	const hiddenItems = document.querySelector('.hidden-items');
+	document.addEventListener('DOMContentLoaded', () => {
+	  const burger = document.querySelector('.burger');
+	  const hiddenItems = document.querySelector('.hidden-items');
 
-	burger.addEventListener('click', () => {
-	  burger.classList.toggle('active');
-	  hiddenItems.classList.toggle('active'); // Переключение класса на hidden-items
+	  burger.addEventListener('click', () => {
+	    burger.classList.toggle('active');
+
+	    if (hiddenItems) { // Проверка на наличие элемента
+	      hiddenItems.classList.toggle('active');
+	    } else {
+	      console.warn('Элемент с классом .hidden-items не найден');
+	    }
+	  });
 	});
 </script>
+
+
 	<font style="display:block; position=absolute; margin-left:auto;margin-right:auto;">
 ДВЕРИ</font>
 	<font style="width:70px;height:50px;"> </font>
