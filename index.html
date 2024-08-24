@@ -8,10 +8,19 @@
 </head>
 <body>
 	<div class="toolbar" align="center">
-<div class="menu">
-    <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
-    <label for="burger-checkbox" class="burger"></label>
-    <div class="hidden-items">
+	<button class="burger"></button>
+	<script>
+	const burger = document.querySelector('.burger');
+
+	burger.addEventListener('click', () => {
+	  burger.classList.toggle('active');
+	});
+	</script>
+	<font style="display:block; position=absolute; margin-left:auto;margin-right:auto;">
+ДВЕРИ</font>
+	<font style="width:70px;height:50px;"> </font>
+	</div>
+<div class="hidden-items">
 		<div class="plitka-very-first"><a href="https://kristy98755.github.io/m.startpage">ГЛАВНАЯ</a></div>
 		<div class="plitka"><a href="#">ПОИСК</a></div>
 		<div class="plitka catalog active">
@@ -92,11 +101,6 @@
 		<div class="plitka"><a href="contacts.html">КОНТАКТЫ</a></div>
 
     </div>
-</div>
-<font style="display:block; position=absolute; margin-left:auto;margin-right:auto;">
-ДВЕРИ</font>
-<font style="width:70px;height:50px;"> </font>
-</div>
 	<div class="cards-grid">
 		<a href="agata-bez-bageta.html"><div class="greencard" ;="">
 			<div class="image-container">
