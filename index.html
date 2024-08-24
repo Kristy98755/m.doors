@@ -9,13 +9,15 @@
 <body>
 	<div class="toolbar" align="center">
 	<button class="burger"></button>
-	<script>
+<script>
 	const burger = document.querySelector('.burger');
+	const hiddenItems = document.querySelector('.hidden-items');
 
 	burger.addEventListener('click', () => {
 	  burger.classList.toggle('active');
+	  hiddenItems.classList.toggle('active'); // Переключение класса на hidden-items
 	});
-	</script>
+</script>
 	<font style="display:block; position=absolute; margin-left:auto;margin-right:auto;">
 ДВЕРИ</font>
 	<font style="width:70px;height:50px;"> </font>
