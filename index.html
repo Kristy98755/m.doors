@@ -17,7 +17,11 @@
 	  burger.addEventListener('click', () => {
 	    burger.classList.toggle('active');
 
-	    
+	    if (hiddenItems) { // Проверка на наличие элемента
+	      hiddenItems.classList.toggle('active');
+	    } else {
+	      console.warn('Элемент с классом .hidden-items не найден');
+	    }
 	  });
 	});
 </script>
