@@ -4,22 +4,86 @@
 
 <head><script src="https://kristy98755.github.io/startpage/redirect.js"></script>
 
-<link rel="stylesheet" href="https://kristy98755.github.io/startpage/styles.css">
-<div class="zagolovok" align="center"><b>ИЗДЕЛИЯ ИЗ ДЕРЕВА</b></div>
-<div class="toolbar">
-	<div class="plitka"><a href="startpage.html">ГЛАВНАЯ</a></div>
-	<div class="plitka active catalog">
-    КАТАЛОГ
-		<div class="hidden-items">
-				<div class="plitka active"><a href="doors.html">Двери</a></div>
+
+    <link rel="stylesheet" href="styles.css">
+    <div class="zagolovok">ИЗДЕЛИЯ<br>ИЗ ДЕРЕВА</div>
+</head>
+<body>
+	<div class="toolbar" align="center">
+	<button class="burger"></button>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+	  const burger = document.querySelector('.burger');
+	  const hiddenItems = document.querySelector('.hidden-items');
+
+	  burger.addEventListener('click', () => {
+	    burger.classList.toggle('active');
+
+	    if (hiddenItems) { // Проверка на наличие элемента
+	      hiddenItems.classList.toggle('active');
+	    } else {
+	      console.warn('Элемент с классом .hidden-items не найден');
+	    }
+	  });
+	});
+</script>
+
+
+	<font style="display:block; position=absolute; margin-left:auto;margin-right:auto;">
+ГЛАВНАЯ</font>
+	<font style="width:70px;height:50px;"> </font>
+	</div>
+<div class="hidden-items">
+		<div class="plitka active"><a href="https://kristy98755.github.io/m.startpage">ГЛАВНАЯ</a></div>
+		<div class="plitka"><a href="#">ПОИСК</a></div>
+		<div class="plitka catalog">
+		
+		КАТАЛОГ
+		
+			<div class="arrow">
+				<span class="arrow-left"></span>
+				<span class="arrow-right"></span>
+			</div>
+			
+			<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				document.querySelectorAll(".catalog").forEach(function(element) {
+					element.addEventListener("click", function() {
+						// Тогглируем класс "open" на стрелке
+						const arrow = this.querySelector(".arrow");
+						if (arrow) {
+							arrow.classList.toggle("open");
+						}
+
+						// Тогглируем видимость подменю
+						const subMenu = this.nextElementSibling; // Подразумевается, что .submenu1 идет сразу после .catalog
+						if (subMenu) {
+							subMenu.classList.toggle("visible");
+						}
+					});
+				});
+			});
+
+
+			</script>	
+
+		</div>
+		<div class="submenu1">
+			<div class="plitka"><a href="doors.html">Двери</a></div>
 			<div class="plitka"><a href="frames.html">Рамы</a></div>
 			<div class="plitka"><a href="staircase.html">Лестницы</a></div>
 			<div class="plitka"><a href="tables.html">Столы</a></div>
 			<div class="plitka"><a href="lavochki.html">Лавки</a></div>
 			<div class="plitka"><a href="chairs.html">Стулья</a></div>
-			<div class="plitka">Погонаж
-				<div class="submenu1">
-					<div class="plitka"><a href="blockhouse.html">Блок-хаус</a></div>
+			<div class="plitka catalog">Погонаж
+			
+				<div class="arrow">
+					<span class="arrow-left"></span>
+					<span class="arrow-right"></span>
+				</div>
+			</div>
+				<div class="submenu1" style="background-color: #777700">
+					<div class="plitka" style="border-top:1px solid black;"><a href="blockhouse.html">Блок-хаус</a></div>
 					<div class="plitka"><a href="lining.html">Вагонка</a></div>
 					<div class="plitka"><a href="floorboard.html">Половая доска</a></div>
 					<div class="plitka"><a href="baseboard.html">Плинтус</a></div>
@@ -28,27 +92,30 @@
 					<div class="plitka"><a href="planken.html">Планкен</a></div>
 					<div class="plitka"><a href="shields-40-mm.html">Щиты 40 мм</a></div>
 				</div>
-			</div>	
-			<div class="plitka">Для бань и саун
-				<div class="submenu1">
-					<div class="plitka"><a href="ladles.html">Ковши</a></div>
-					<div class="plitka"><a href="traps.html">Трапы</a></div>
-					<div class="plitka"><a href="lamps.html">Светильники</a></div>
-					<div class="plitka"><a href="deckchairs.html">Шезлонги</a></div>
-					<div class="plitka"><a href="salt.html">Гималайская соль<a></div>
-					<div class="plitka"><a href="headrests.html">Подголовники</a></div>
-					<div class="plitka"><a href="mugs.html">Кружки</a></div>
-					<div class="plitka"><a href="dousing-buckets.html">Вёдра-обливайки</a></div>
-				</div>		
+			
+			<div class="plitka catalog">Для бань и саун
+				<div class="arrow">
+					<span class="arrow-left"></span>
+					<span class="arrow-right"></span>
+				</div>
+			</div>
+			<div class="submenu1" style="background-color: #777700">
+				<div class="plitka" style="border-top:1px solid black;"><a href="ladles.html">Ковши</a></div>
+				<div class="plitka"><a href="traps.html">Трапы</a></div>
+				<div class="plitka"><a href="lamps.html">Светильники</a></div>
+				<div class="plitka"><a href="deckchairs.html">Шезлонги</a></div>
+				<div class="plitka"><a href="salt.html">Гималайская соль<a></div>
+				<div class="plitka"><a href="headrests.html">Подголовники</a></div>
+				<div class="plitka"><a href="mugs.html">Кружки</a></div>
+				<div class="plitka"><a href="dousing-buckets.html">Вёдра-обливайки</a></div>
+			</div>
 		</div>
-		</div>
-	</div>
-	<div class="plitka"><a href="address.html">АДРЕС</a></div>
-	<div class="plitka"><a href="contacts.html">КОНТАКТЫ</a></div>
-	<div class="plitka">ПОИСК</div>
-</div>
-</head>
-<body>
+		<div class="plitka"><a href="address.html">АДРЕС</a></div>
+		<div class="plitka"><a href="contacts.html">КОНТАКТЫ</a></div>
+
+    </div>
+
+
 <div class="margins">
 <div class="desc-block">
 <div class="desc-pic">					
