@@ -3,7 +3,10 @@
 <head>
 <script src="https://kristy98755.github.io/startpage/redirect.js"></script>
 
+
     <link rel="stylesheet" href="https://kristy98755.github.io/m.startpage/styles.css">
+    <!-- <link rel="stylesheet" href="C:\Users\XAKEP\Documents\GitHub\m.startpage\styles.css"> -->
+	
     <div class="zagolovok">ИЗДЕЛИЯ<br>ИЗ ДЕРЕВА</div>
 </head>
 <body>
@@ -19,8 +22,6 @@
 
 	    if (hiddenItems) { // Проверка на наличие элемента
 	      hiddenItems.classList.toggle('active');
-	    } else {
-	      console.warn('Элемент с классом .hidden-items не найден');
 	    }
 	  });
 	});
@@ -112,7 +113,8 @@
 		<div class="plitka"><a href="contacts.html">КОНТАКТЫ</a></div>
 
     </div>
-	<div class="cards-grid">
+	<div class="cards-grid" style="top:calc(2*(3vw + 2vh + 1.2vmin + 22px + 2vw + 2vh + 5vmax));">
+	<!-- Абракадабра внутри calc взята из значений высот toolbar и zagolovok, а на два умножена от балды, лишь бы не перекрывалось -->
 		<a href="agata-bez-bageta.html"><div class="greencard" ;="">
 			<div class="image-container">
 				<img src="https://raw.githubusercontent.com/Kristy98755/startpage/pictures/агата без багета.jpg" alt="Door">
